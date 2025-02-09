@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Feedback</title>
+  </head>
+  <body>
+    <h1 id="title">User Feedback</h1>
+    <p id="description">Please fill out this form</p>
+    <div class="container-main">
+      <form
+        id="survey-form"
+        method="post"
+        action="https://user-feedback.not-evil.org"
+      >
+        <fieldset class="info">
+          <label id="name-label"
+            >Participants Name
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="John Doe"
+              required
+            />
+          </label>
+          <label id="email-label"
+            >Email Address
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="john.doe@not-evil.org"
+              required
+            />
+          </label>
+          <label id="number-label"
+            >Age <em>(optional)</em>
+            <input
+              id="number"
+              name="number"
+              type="number"
+              min="13"
+              max="120"
+              placeholder="99"
+            />
+          </label>
+        </fieldset>
+        <fieldset class="experience">
+          <label for="dropdown"
+            >Overall Experience
+            <select id="dropdown" name="dropdown">
+              <option value="">(rate your experience)</option>
+              <option value="5">5 Excellent</option>
+              <option value="4">4 Good</option>
+              <option value="3">3 Satisfactory</option>
+              <option value="2">2 Fair</option>
+              <option value="1">1 Poor</option>
+            </select>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Type of Training</legend>
+          <label for="virtual"
+            ><input
+              id="virtual"
+              type="radio"
+              name="training-type"
+              value="virtual"
+              class="inline"
+              checked
+            />
+            Virtual</label
+          >
+          <label for="in-person"
+            ><input
+              id="in-person"
+              type="radio"
+              name="training-type"
+              value="in-person"
+              class="inline"
+            />
+            In-Person</label
+          >
+        </fieldset>
+        <fieldset class="training-attended">
+          Training/s Attended <em>(choose all applicable)</em>
+          <label for="cloud">
+            <input id="cloud" type="checkbox" name="cloud" value="cloud" class="inline" />
+            Breaching the Cloud
+          </label>
+          <label for="analysis">
+            <input
+              id="analysis"
+              type="checkbox"
+              name="analysis"
+              value="analysis"
+              class="inline"
+            />
+            Malware Analysis
+          </label>
+          <label for="recon">
+            <input id="recon" type="checkbox" name="recon" value="recon" class="inline" />
+            Recon-in-Depth
+          </label>
+          <label for="red-team">
+            <input
+              id="red-team"
+              type="checkbox"
+              name="red-team"
+              value="red-team"
+              class="inline"
+            />
+            Red Team Fundamentals
+          </label>
+          <label for="soc">
+            <input id="soc" type="checkbox" name="soc" value="soc" class="inline" /> SOC
+            Fundamentals
+          </label>
+        </fieldset>
+        <label for="comment"
+          >Let hear more from you
+          <textarea
+            id="comment"
+            name="comment"
+            rows="3"
+            cols="30"
+            placeholder="Add more trainings..."
+          ></textarea>
+        </label>
+        <label for="submit">
+          <input id="submit" type="submit" value="Submit" />
+        </label>
+      </form>
+    </div>
+  </body>
+</html>
